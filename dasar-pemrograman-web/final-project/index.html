@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Final Project</title>
+    <title>KRI-TIKUS | Tulis Ulasan Film</title>
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
@@ -40,7 +40,7 @@
                     <span>@julianaputra</span>
                     <div class="profile-detail">
                         <span>
-                            <strong>5</strong><br>Ulasan
+                            <strong>6</strong><br>Ulasan
                         </span>
                         <span>
                             <strong>500</strong><br>Pengikut
@@ -50,7 +50,7 @@
                         </span>
                     </div>
                     <p class="profile-quote">
-                        Saya suka film bergenre superhero khususnya besutan Marvel, DC, dan BumiLangit
+                        Saya suka film superhero khususnya besutan Marvel, DC, dan BumiLangit
                     </p>
                     <button class="profile-button">Ikuti</button>
                 </div>
@@ -60,9 +60,23 @@
                     <h1 class="content-title">Ulasan oleh I Kadek Juliana Putra</h1>
                     <hr>
                     <div class="filter">
-                        <a href="#" class="filter-item active">Semua</a>
-                        <a href="#" class="filter-item">Horror</a>
-                        <a href="#" class="filter-item">Komedi</a>
+                        Genre:
+                        <div class="filter-item">
+                            <input type="radio" id="all" name="genre" checked value="semua">
+                            <label for="all">Semua</label>
+                        </div>
+                        <div class="filter-item">
+                            <input type="radio" id="action" name="genre" value="aksi">
+                            <label for="action">Aksi</label>
+                        </div>
+                        <div class="filter-item">
+                            <input type="radio" id="horror" name="genre" value="horor">
+                            <label for="horror">Horor</label>
+                        </div>
+                        <div class="filter-item">
+                            <input type="radio" id="comedy" name="genre" value="komedi">
+                            <label for="comedy">Komedi</label>
+                        </div>
                     </div>
                 </div>
                 <div id="article-container" class="articles">

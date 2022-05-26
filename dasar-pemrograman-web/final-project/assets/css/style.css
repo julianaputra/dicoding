@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap");
 
 :root {
-    --black: rgb(35, 35, 35);
-    --gray: rgb(242, 242, 242);
-    --yellow: rgb(245, 197, 24);
-    --white: #ffffff;
-  }
+  --black: rgb(35, 35, 35);
+  --gray: rgb(242, 242, 242);
+  --yellow: rgb(245, 197, 24);
+  --white: #ffffff;
+}
 
 * {
   padding: 0;
@@ -36,40 +36,41 @@ header {
 }
 
 nav ul {
-    display: flex;
-    color: white;
-    list-style: none    ;
+  display: flex;
+  color: white;
+  list-style: none;
 }
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 12px;
-    transition: color .3s ease;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px;
+  transition: color 0.3s ease;
 }
 nav ul li a:hover {
-    color: var(--yellow);
+  color: var(--yellow);
 }
 
 main {
-    padding-top: 86px;
-    padding-bottom: 36px;
+  padding-top: 86px;
+  padding-bottom: 36px;
+  min-height: 100vh;
 }
 
 footer {
-    background-color: rgb(35, 35, 35);
-    color: white;
-    text-align: center;
-    padding: 20px;
+  background-color: rgb(35, 35, 35);
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
 
 button {
-    font-family: "Quicksand", sans-serif;
-    cursor: pointer;
+  font-family: "Quicksand", sans-serif;
+  cursor: pointer;
 }
 
 hr {
-    margin: 12px 0;
+  margin: 12px 0;
 }
 
 .logo {
@@ -90,7 +91,7 @@ hr {
   margin-left: 12px;
 }
 .content-title {
-    font-size: 28px;
+  font-size: 28px;
 }
 
 .aside {
@@ -99,28 +100,30 @@ hr {
 }
 
 .filter {
-    display: flex;
+  display: flex;
+  align-items: center;
 }
-
-.filter-item {
-    display: flex;
-    align-items: center;
-    padding: 6px 16px;
-    border: 2px solid var(--yellow);
-    margin-right: 8px;
-    border-radius: 18px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
-    transition: all .3s ease;
+.filter-item label {
+  display: flex;
+  align-items: center;
+  padding: 6px 16px;
+  border: 2px solid var(--yellow);
+  margin-left: 8px;
+  border-radius: 18px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
-.filter-item:hover {
-    background-color: var(--gray);
+.filter-item input[type="radio"] {
+  display: none;
 }
-
-.filter-item.active {
-    background-color: rgba(245, 197, 24, .2);
-    color: var(--black);
+.filter-item input[type="radio"]:checked + label {
+  background-color: rgba(245, 197, 24, 0.2);
+}
+.filter-item label:hover {
+  background-color: var(--gray);
 }
 
 .card {
@@ -132,57 +135,65 @@ hr {
 }
 
 .separator {
-    margin: 0 8px;
+  margin: 0 8px;
 }
-
 
 .article {
   display: flex;
 }
 
 .article .icon {
-    width: 18px;
-    margin-right: 4px;
+  width: 18px;
+  margin-right: 4px;
 }
 
 .article-score {
-    display: flex;
-    align-items: center;
-    font-weight: bold;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
 }
 
 .article-score .icon {
-    color: var(--yellow);
+  color: var(--yellow);
 }
 
 .article img {
-    border-radius: 8px;
-    width: 240px;
-    height: 184px;
-    object-fit: cover;
+  border-radius: 8px;
+  width: 240px;
+  height: 184px;
+  object-fit: cover;
 }
 
 .article-body {
-    padding-left: 16px;
+  padding-left: 16px;
+}
+.article-genre {
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  background-color: var(--gray);
+  margin-left: 8px;
 }
 
 .article-detail {
-    margin-top: 4px;
-    display: flex;
-    align-items: center;
-    margin-bottom: 12px;
-    /* color: var(--gray); */
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
 }
 
 .article-button {
-    margin-top: 8px;
-    display: inline-block;
-    font-weight: bold;
-    margin-bottom: 8px;
+  margin-top: 8px;
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 8px;
 }
 
 .profile {
-    text-align: center;
+  text-align: center;
 }
 
 .profile img {
@@ -195,33 +206,33 @@ hr {
 }
 
 .profile-name {
-    font-weight: bold;
-    margin-top: 8px;
+  font-weight: bold;
+  margin-top: 8px;
 }
 .profile-detail {
-    margin-top: 12px;
-    display: flex;
-    justify-content: space-around;
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-around;
 }
 .profile-quote {
-    margin-top: 12px;
-    font-size: 14px;
+  margin-top: 12px;
+  font-size: 14px;
 }
 .profile-button {
-    margin-top: 20px;
-    display: block;
-    width: 100%;
-    padding: 8px 16px;
-    border-radius: 20px;
-    border: 2px solid var(--yellow);
-    background: var(--yellow);
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 4px;
-    transition: all .3s ease;
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 2px solid var(--yellow);
+  background: var(--yellow);
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  transition: all 0.3s ease;
 }
 .profile-button:hover {
-    transform: translateY(-4px);
+  transform: translateY(-4px);
 }
 
 @media screen and (min-width: 992px) {
@@ -230,7 +241,7 @@ hr {
     margin: auto;
   }
   .profile {
-      top: 86px;
-      position: sticky;
+    top: 86px;
+    position: sticky;
   }
 }

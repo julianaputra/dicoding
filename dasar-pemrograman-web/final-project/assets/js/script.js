@@ -74,6 +74,8 @@ const articles = [
 ];
 
 const articleContainer = document.querySelector("#article-container");
+const toggleButton = document.querySelector("#toggle-button")
+const navBar = document.querySelector("nav")
 
 function articleItem(article) {
   return `
@@ -135,3 +137,7 @@ filters.forEach((filter) =>
 );
 
 loadArticles("semua");
+
+toggleButton.addEventListener("click", function() {
+  navBar.classList.toggle("open")
+})
